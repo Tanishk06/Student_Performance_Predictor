@@ -1,0 +1,368 @@
+/* =================================
+   PREMIUM NAVY + TEAL THEME
+================================= */
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #172b46;
+  background: #edf2f8;
+
+  --navy: #14243d;
+  --navy-light: #203a5d;
+  --blue: #5268cb;
+  --teal: #167d8d;
+  --teal-dark: #116575;
+  --background: #edf2f8;
+  --surface: #ffffff;
+  --text: #172b46;
+  --muted: #64748b;
+  --border: #dce5ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+/* =================================
+   PAGE
+================================= */
+
+.page {
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+  padding: 38px 0 45px;
+}
+
+/* =================================
+   HERO - DARK NAVY
+================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 45px 35px;
+  margin-bottom: 30px;
+  border-radius: 17px;
+  text-align: center;
+  background: linear-gradient(125deg, #14243d 0%, #1c3558 65%, #24536a 100%);
+  box-shadow: 0 12px 30px rgba(20, 36, 61, 0.14);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: -150px;
+  right: -55px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(255, 255, 255, 0.025),
+    0 0 0 70px rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #65c5cf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.hero h1 {
+  position: relative;
+  margin: 15px 0 12px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+
+.hero p {
+  position: relative;
+  max-width: 610px;
+  margin: 0 auto;
+  color: #c5d3e5;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.model-tag {
+  display: inline-flex;
+  margin-top: 22px;
+  padding: 10px 17px;
+  border: 1px solid rgba(117, 203, 212, 0.25);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #a5e2e5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =================================
+   FORM CONTAINER
+================================= */
+
+.form-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(31, 53, 82, 0.055);
+}
+
+/* =================================
+   FORM SECTIONS
+================================= */
+
+.form-section {
+  margin-bottom: 28px;
+  padding: 20px;
+  border: 1px solid #e4ebf3;
+  border-radius: 11px;
+  background: #fbfcfe;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e3eaf2;
+  position: relative;
+}
+
+.section-heading::before {
+  content: "";
+  width: 4px;
+  height: 23px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #5268cb, #167d8d);
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #203653;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+/* =================================
+   INPUT GRID
+================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 26px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  color: #344b68;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid #ced9e7;
+  border-radius: 7px;
+  outline: none;
+  background: #f6f9fc;
+  color: #203653;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.field input:hover,
+.field select:hover {
+  border-color: #8da7c6;
+  background: #ffffff;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #167d8d;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(22, 125, 141, 0.12);
+}
+
+.field small {
+  color: #8190a5;
+  font-size: 11px;
+}
+
+/* =================================
+   PREDICTION BUTTON
+================================= */
+
+.predict-button {
+  width: 100%;
+  min-height: 51px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(100deg, #167d8d, #246b91);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 5px 13px rgba(22, 125, 141, 0.17);
+  transition: 0.2s ease;
+}
+
+.predict-button:hover {
+  background: linear-gradient(100deg, #116575, #1c577c);
+  box-shadow: 0 7px 18px rgba(22, 125, 141, 0.25);
+  transform: translateY(-1px);
+}
+
+.predict-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
+/* =================================
+   RESULT
+================================= */
+
+.result-card {
+  margin-top: 25px;
+  padding: 35px;
+  border: 1px solid #b9ded9;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ffffff, #effaf8);
+  text-align: center;
+  box-shadow: 0 7px 22px rgba(22, 125, 141, 0.06);
+}
+
+.result-card .eyebrow {
+  color: #167d8d;
+}
+
+.result-card h2 {
+  margin: 12px 0 0;
+  color: #167d63;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.result-card > p {
+  color: #607286;
+  font-size: 14px;
+}
+
+.result-model {
+  margin-top: 15px;
+  color: #5268cb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.disclaimer {
+  color: #8291a1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =================================
+   STATES
+================================= */
+
+.error-box {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid #f0caca;
+  border-radius: 8px;
+  background: #fff2f2;
+  color: #a83232;
+  font-size: 13px;
+}
+
+.loading {
+  padding: 60px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+  padding-top: 27px;
+  color: #8291a1;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 650px) {
+  .page {
+    width: min(100% - 22px, 550px);
+    padding-top: 20px;
+  }
+
+  .hero {
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .form-card {
+    padding: 14px;
+  }
+
+  .form-section {
+    padding: 16px 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .result-card {
+    padding: 25px 15px;
+  }
+}
